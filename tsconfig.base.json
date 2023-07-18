@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@simples-project/libs/ng/shared/ui": [
+        "packages/libs/ng/shared/ui/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

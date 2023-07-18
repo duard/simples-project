@@ -1,0 +1,34 @@
+{
+  "name": "libs-ng-shared-ui",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/libs/ng/shared/ui/src",
+  "prefix": "simples-project",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/libs/ng/shared/ui/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/libs/ng/shared/ui/**/*.ts",
+          "packages/libs/ng/shared/ui/**/*.html"
+        ]
+      }
+    }
+  }
+}
