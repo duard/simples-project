@@ -52,7 +52,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "apps-react-rc-app:build",
-        "hmr": true
+        "hmr": true,
+        "port": 3001
       },
       "configurations": {
         "development": {
